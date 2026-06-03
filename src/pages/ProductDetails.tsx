@@ -41,6 +41,10 @@ function ProductDetails() {
   /* ACTIVE IMAGE */
   const [activeImage, setActiveImage] = useState("");
 
+  /* ACCORDION */
+  const [openAccordion, setOpenAccordion] =
+    useState("");
+
   useEffect(() => {
     if (productImages.length > 0) {
       setActiveImage(productImages[0]);
@@ -168,33 +172,6 @@ function ProductDetails() {
 
             </div>
 
-            {/* SAMPLE */}
-            {/* <div className="border border-white/10 p-5 mb-6">
-
-              <p className="uppercase tracking-[3px] text-xs text-zinc-500 mb-4">
-
-                Choose Your Complimentary Sample
-
-              </p>
-
-              <select className="w-full bg-transparent outline-none text-white">
-
-                <option className="bg-black">
-                  Midnight Recovery Oil (2ml)
-                </option>
-
-                <option className="bg-black">
-                  Retinol Serum Sample
-                </option>
-
-                <option className="bg-black">
-                  Peptide Cream Sample
-                </option>
-
-              </select>
-
-            </div> */}
-
             {/* BUTTONS */}
             <div className="space-y-4 mb-10">
 
@@ -218,9 +195,19 @@ function ProductDetails() {
             {/* ACCORDION */}
             <div className="border-t border-white/10">
 
+              {/* REGIMEN */}
               <div className="border-b border-white/10 py-6">
 
-                <div className="flex items-center justify-between">
+                <button
+                  onClick={() =>
+                    setOpenAccordion(
+                      openAccordion === "regimen"
+                        ? ""
+                        : "regimen"
+                    )
+                  }
+                  className="w-full flex items-center justify-between"
+                >
 
                   <h3 className="uppercase tracking-[3px] text-xs">
 
@@ -228,15 +215,54 @@ function ProductDetails() {
 
                   </h3>
 
-                  <span>+</span>
+                  <span className="text-xl text-[#C8A96B]">
 
-                </div>
+                    {openAccordion === "regimen"
+                      ? "−"
+                      : "+"}
+
+                  </span>
+
+                </button>
+
+                {openAccordion === "regimen" && (
+
+                  <div className="pt-5 text-zinc-400 leading-8 text-sm">
+
+                    <p className="mb-4">
+
+                      Marine bio-ferments stimulate collagen
+                      synthesis at the dermal level.
+
+                    </p>
+
+                    <p>
+
+                      Niacinamide refines pore texture while
+                      botanical actives restore radiance and
+                      elasticity.
+
+                    </p>
+
+                  </div>
+
+                )}
 
               </div>
 
+              {/* HOW TO USE */}
               <div className="border-b border-white/10 py-6">
 
-                <div className="flex items-center justify-between">
+                <button
+                  onClick={() =>
+                    setOpenAccordion(
+                      openAccordion === "usage"
+                        ? ""
+                        : "usage"
+                    )
+                  }
+                  className="w-full flex items-center justify-between"
+                >
 
                   <h3 className="uppercase tracking-[3px] text-xs">
 
@@ -244,9 +270,31 @@ function ProductDetails() {
 
                   </h3>
 
-                  <span>+</span>
+                  <span className="text-xl text-[#C8A96B]">
 
-                </div>
+                    {openAccordion === "usage"
+                      ? "−"
+                      : "+"}
+
+                  </span>
+
+                </button>
+
+                {openAccordion === "usage" && (
+
+                  <div className="pt-5 text-zinc-400 leading-8 text-sm">
+
+                    <p>
+
+                      Apply 2–3 drops to cleansed skin every
+                      evening. Massage gently upward and follow
+                      with moisturizer.
+
+                    </p>
+
+                  </div>
+
+                )}
 
               </div>
 
@@ -290,13 +338,13 @@ function ProductDetails() {
           </div>
 
           {/* CUSTOM ARROWS */}
-          <button className="ritual-prev absolute -left-6.25 top-[55%] z-20 text-[#C8A96B] hover:text-white transition">
+          <button className="ritual-prev absolute -left-6 top-[55%] z-20 text-[#C8A96B] hover:text-white transition">
 
             <FiChevronLeft size={50} />
 
           </button>
 
-          <button className="ritual-next absolute -right-6.25 top-[55%] z-20 text-[#C8A96B] hover:text-white transition">
+          <button className="ritual-next absolute -right-6 top-[55%] z-20 text-[#C8A96B] hover:text-white transition">
 
             <FiChevronRight size={50} />
 
