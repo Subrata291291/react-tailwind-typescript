@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+body {
+  background: #0A0A0A;
+   overflow-x: hidden;
+}
+button {
+  cursor: pointer;
+}
+/* TOASTIFY CUSTOM THEME */
+
+.custom-toast {
+  background: #0d0d0d !important;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: white !important;
+  font-family: inherit;
+}
+
+.custom-toast-body {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.custom-toast-progress {
+  background: #C8A96B !important;
+}
+
+/* SUCCESS ICON */
+.Toastify__toast-icon svg {
+  fill: #C8A96B;
+}
+
+/* CLOSE BUTTON */
+.Toastify__close-button {
+  color: #C8A96B !important;
+  opacity: 1;
+}
+
+/* SUCCESS TOAST BORDER */
+.Toastify__toast--success {
+  border-left: 3px solid #C8A96B;
+}
+
+/* ERROR TOAST */
+.Toastify__toast--error {
+  border-left: 3px solid #ff4d4d;
+}
+
+/* INFO TOAST */
+.Toastify__toast--info {
+  border-left: 3px solid #C8A96B;
+}
