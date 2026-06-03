@@ -261,7 +261,7 @@ function Checkout() {
             </div>
 
             {/* SAMPLES */}
-            <div className="border border-white/10 p-8 px-4 bg-[#14110f]">
+            <div className="border border-white/10 p-8 px-4 md:px-8 bg-[#14110f]">
 
               {/* TOP */}
               <div className="flex items-center justify-between mb-10">
