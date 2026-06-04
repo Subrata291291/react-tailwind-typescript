@@ -86,14 +86,14 @@ function Cart() {
                     <div>
 
                       {/* TITLE */}
-                      <h2 className="text-3xl font-serif mb-3">
+                      <h2 className="text-3xl font-serif mb-2">
 
                         {item.name}
 
                       </h2>
 
                       {/* DESCRIPTION */}
-                      <p className="text-zinc-500 mb-4">
+                      <p className="text-zinc-500 mb-2">
 
                         {item.description}
 
@@ -108,7 +108,7 @@ function Cart() {
                       </p>
 
                       {/* QUANTITY */}
-                      <div className="flex items-center gap-4 mt-6">
+                      <div className="flex items-center gap-4 mt-4">
 
                         {/* DECREASE */}
                         <button
@@ -150,7 +150,7 @@ function Cart() {
                       onClick={() =>
                         removeFromCart(item.id)
                       }
-                      className="text-left text-sm uppercase tracking-[3px] text-zinc-500 hover:text-white transition mt-6"
+                      className="text-left text-[12px] uppercase tracking-[3px] text-zinc-500 hover:text-white transition mt-6"
                     >
 
                       Remove Item

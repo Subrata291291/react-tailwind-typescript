@@ -629,8 +629,7 @@ function Checkout() {
 
               <p className="text-center text-zinc-500 text-xs tracking-[2px] mt-6 uppercase">
 
-                Free returns within 30
-                days of delivery
+                Free returns within 7 days of delivery
 
               </p>
 
