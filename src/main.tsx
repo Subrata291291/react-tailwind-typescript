@@ -16,9 +16,7 @@ import { ToastContainer } from "react-toastify";
 
 import { CartProvider } from "./context/CartContext";
 
-ReactDOM.createRoot(
-  document.getElementById("root")!
-).render(
+ReactDOM.createRoot( document.getElementById("root")!).render(
   <CartProvider>
 
       <App />
